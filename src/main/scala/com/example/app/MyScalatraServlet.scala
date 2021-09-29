@@ -8,4 +8,11 @@ class MyScalatraServlet extends ScalatraServlet {
     views.html.hello()
   }
 
+  get("/test/:name") {
+    s"hello, ${params("name")}."
+  }
+
+  get("/error") {
+    <h1>Some Error</h1>
+  }
 }
